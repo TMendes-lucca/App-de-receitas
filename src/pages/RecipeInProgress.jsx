@@ -51,7 +51,7 @@ function RecipeInProgress() {
       const recipesDone = getLocalStorage('doneRecipes');
       const recipeExists = recipesDone.filter((recipe) => recipe.id === Number(recipeID));
       if (recipeExists.length > 0) {
-        setRenderButton(false);
+        return;
       }
     }
     if (getLocalStorage('inProgressRecipes') !== null) {
